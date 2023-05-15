@@ -1,0 +1,29 @@
+var count = 0;
+document.addEventListener('keypress',(event) => {
+ var name = event.key;
+ var code = event.code;
+ console.log(name);
+ if ( name == "j" || (name == "J")){
+    console.log(name)
+    document.getElementById("a").innerHTML = name;
+ }
+else if ( name == "o" || (name == "O")){
+    console.log(name)
+    document.getElementById("b").innerHTML = name;
+}
+else if ( name == "A" || (name == "a")){
+    console.log(name)
+    document.getElementById("c").innerHTML = name;
+    document.getElementById("f").innerHTML = name;
+ }
+else if ( name == "N" || (name == "n")){
+    console.log(name)
+    document.getElementById("d").innerHTML = name;
+    document.getElementById("e").innerHTML = name;
+  } else {
+  count = count + 1;
+  document.getElementById("p").src = "images/"+ count +".png";}
+   if(count > 6){
+   alert(" Você perdeu!");
+   }
+}, false);
